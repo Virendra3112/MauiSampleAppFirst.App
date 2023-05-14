@@ -6,19 +6,15 @@
     xmlns:local="clr-namespace:MauiSampleAppFirst.Views"
     Shell.FlyoutBehavior="Disabled">
 
-    <!--<TabBar>
-        <Tab>
-            <ShellContent Title="Dashboard" ContentTemplate="{DataTemplate local:DashboardTabPage}"/>
-        </Tab>
-    </TabBar>-->
-
-    <TabBar>
+    <TabBar Shell.TabBarBackgroundColor="Black" Shell.TabBarUnselectedColor="Red" Shell.TabBarTitleColor="White">
         <Tab Title="Dashboard">
-            <ShellContent ContentTemplate="{DataTemplate local:DashboardTabPage}"/>
+            <ShellContent 
+                          ContentTemplate="{DataTemplate local:DashboardTabPage}"/>
         </Tab>
         <Tab Title="SecondTab">
-            <ShellContent ContentTemplate="{DataTemplate local:SecondTabPage}"/>
-        </Tab>
+            <ShellContent 
+                          ContentTemplate="{DataTemplate local:SecondTabPage}"/>
+        </Tab> 
     </TabBar>
 
 </Shell>
