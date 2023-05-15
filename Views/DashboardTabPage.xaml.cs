@@ -50,6 +50,7 @@ namespace MauiSampleAppFirst.Views
             
             CategoryList.Add(new Item { Name = "Layouts", Image = "icon.png" });
             CategoryList.Add(new Item { Name = "List", Image = "icon.png" });
+           
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

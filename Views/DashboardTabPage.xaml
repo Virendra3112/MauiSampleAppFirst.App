@@ -4,28 +4,30 @@
              x:Class="MauiSampleAppFirst.Views.DashboardTabPage"
              Title="Dashboard" BackgroundColor="#333333"  x:Name="MyPage">
 
-    <VerticalStackLayout>
-        <ScrollView>
+    <ScrollView>
+        <VerticalStackLayout>
+            
+       
+    <StackLayout BindableLayout.ItemsSource="{Binding CategoryList , Source={x:Reference MyPage}}">
+        <BindableLayout.ItemTemplate>
+            <DataTemplate>
+                <Grid>
 
-            <StackLayout BindableLayout.ItemsSource="{Binding CategoryList , Source={x:Reference MyPage}}">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Frame Margin="10" Padding="0,20" CornerRadius="5" HeightRequest="100" WidthRequest="80" BackgroundColor="#7a7a7a">
-                                <FlexLayout Direction="Column" AlignItems="Center">
-                                    <Image Source="{Binding Image}" WidthRequest="30" HeightRequest="30"/>
-                                    <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" Padding="0,10,0,0" 
+                    <Frame Margin="10" Padding="0,20" CornerRadius="5" HeightRequest="100" WidthRequest="80" BackgroundColor="#7a7a7a">
+                        <FlexLayout Direction="Column" AlignItems="Center">
+                            <Image Source="{Binding Image}" WidthRequest="30" HeightRequest="30"/>
+                            <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" Padding="0,10,0,0" 
                                              HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  LineBreakMode="CharacterWrap" MaxLines="2"/>
-                                </FlexLayout>
-                                <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" CommandParameter="{Binding Name}"/>
-                                </Frame.GestureRecognizers>
-                            </Frame>
-                        </Grid>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>
-        </ScrollView>
-    </VerticalStackLayout>
-    
+                        </FlexLayout>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" CommandParameter="{Binding Name}"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+
+                </Grid>
+            </DataTemplate>
+        </BindableLayout.ItemTemplate>
+    </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
