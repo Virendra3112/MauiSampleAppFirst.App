@@ -62,9 +62,9 @@ namespace MauiSampleAppFirst.Views
                 switch (SelectedItem.Name)
                 {
 
-                    case "Label":
+                    case "Layouts":
                         {
-                            //Navigation.PushAsync(new CustomLabelsPage());
+                            Navigation.PushAsync(new LayoutsPage(),true);
 
                             break;
                         }

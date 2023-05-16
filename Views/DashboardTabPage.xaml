@@ -7,13 +7,13 @@
     <ScrollView>
         <VerticalStackLayout>
             
-       
+        
     <StackLayout BindableLayout.ItemsSource="{Binding CategoryList , Source={x:Reference MyPage}}">
         <BindableLayout.ItemTemplate>
             <DataTemplate>
                 <Grid>
 
-                    <Frame Margin="10" Padding="0,20" CornerRadius="5" HeightRequest="100" WidthRequest="80" BackgroundColor="#7a7a7a">
+                    <Frame Margin="10" Padding="0,20" CornerRadius="5" HeightRequest="120" BackgroundColor="#7a7a7a">
                         <FlexLayout Direction="Column" AlignItems="Center">
                             <Image Source="{Binding Image}" WidthRequest="30" HeightRequest="30"/>
                             <Label Text="{Binding Name}" TextColor="White" FontSize="Medium" Padding="0,10,0,0" 
