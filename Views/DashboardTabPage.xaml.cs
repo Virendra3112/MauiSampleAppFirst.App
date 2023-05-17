@@ -48,8 +48,9 @@ namespace MauiSampleAppFirst.Views
 
             CategoryList = new ObservableCollection<Item>();
             
+            CategoryList.Add(new Item { Name = "CollectionView", Image = "icon.png" });
             CategoryList.Add(new Item { Name = "Layouts", Image = "icon.png" });
-            CategoryList.Add(new Item { Name = "List", Image = "icon.png" });
+            //CategoryList.Add(new Item { Name = "List", Image = "icon.png" });
            
         }
 
@@ -62,6 +63,13 @@ namespace MauiSampleAppFirst.Views
                 switch (SelectedItem.Name)
                 {
 
+                    case "CollectionView":
+                        {
+                            Navigation.PushAsync(new CollectionViewSamplePage(),true);
+
+                            break;
+                        }
+                    
                     case "Layouts":
                         {
                             Navigation.PushAsync(new LayoutsPage(),true);
