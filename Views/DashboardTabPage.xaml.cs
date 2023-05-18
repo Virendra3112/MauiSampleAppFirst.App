@@ -65,7 +65,10 @@ namespace MauiSampleAppFirst.Views
 
                     case "CollectionView":
                         {
-                            Navigation.PushAsync(new CollectionViewSamplePage(),true);
+                            Navigation.PushAsync(new CollectionViewSamplePage());
+                            //Shell.Current.Navigation.PushAsync(new CollectionViewSamplePage());
+
+                            //Shell.Current.GoToAsync("DashboardTabPage/CollectionViewSamplePage");
 
                             break;
                         }

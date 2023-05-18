@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.CollectionViewSamplePage"
-             Title="CollectionViewSamplePage" BackgroundColor="#333333">
+             Title="CollectionViewSamplePage" BackgroundColor="#333333"
+             Shell.TabBarIsVisible="False" Shell.NavBarIsVisible="True" >
 
     <Grid>
         <Grid.RowDefinitions>
@@ -31,7 +32,7 @@
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
 
-                            <Ellipse Stroke="Red" Grid.RowSpan="2" 
+                            <Ellipse Stroke="White" Grid.RowSpan="2" 
                                      WidthRequest="60"
                                      HeightRequest="60"
                                      HorizontalOptions="Start"

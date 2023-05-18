@@ -1,4 +1,6 @@
-﻿namespace MauiSampleAppFirst;
+﻿using MauiSampleAppFirst.Views;
+
+namespace MauiSampleAppFirst;
 
 public partial class App : Application
 {
@@ -7,5 +9,8 @@ public partial class App : Application
 		InitializeComponent();
 
 		MainPage = new AppShell();
-	}
+
+        Routing.RegisterRoute("DashboardTabPage/CollectionViewSamplePage", typeof(CollectionViewSamplePage));
+
+    }
 }

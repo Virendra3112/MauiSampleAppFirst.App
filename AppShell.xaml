@@ -7,7 +7,7 @@
     Shell.FlyoutBehavior="Disabled">
 
     <TabBar Shell.TabBarBackgroundColor="#333333" Shell.TabBarTitleColor="White">
-        <Tab Title="Dashboard">
+        <Tab Title="Dashboard" >
             <ShellContent Icon="icon.png"
                           ContentTemplate="{DataTemplate local:DashboardTabPage}"/>
         </Tab>
