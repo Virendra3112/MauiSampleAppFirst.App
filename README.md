@@ -1,6 +1,6 @@
 # MauiSampleAppFirst
 
-# Xamarin Forms Custom UI samples 
+# .Net MAUI UI samples 
 
 | Sr. #  | Features | Status | 
 | ------------- | ------------- | ------ |
