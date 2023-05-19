@@ -2,11 +2,72 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.LayoutsPage"
-             Title="LayoutsPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Title="LayoutsPage"  BackgroundColor="#333333"
+             Shell.TabBarIsVisible="False" Shell.NavBarIsVisible="True">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*" />
+            <RowDefinition Height="5*" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Grid.Row="0" Orientation="Vertical" Spacing="5" Margin="10">
+
+            <HorizontalStackLayout Spacing="5">
+            <Image Source="icon.png" HeightRequest="50" WidthRequest="50"/>
+                <Label Text="Virendra Thakur" TextColor="White" FontSize="Medium" VerticalTextAlignment="Center"/>
+            </HorizontalStackLayout>
+
+            <Label Text="Test desciption" TextColor="White" FontSize="Medium" VerticalTextAlignment="Center"/>
+
+            <Image BackgroundColor="#3a3a3a" Margin="5" Source="icon.png" HeightRequest="300" WidthRequest="300"/>
+
+            <BoxView HeightRequest="1" BackgroundColor="Red"/>
+            
+            <HorizontalStackLayout Margin="10" Spacing="50">
+
+                <VerticalStackLayout>
+                    <Image Source="icon" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Like" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Image Source="icon.png" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Comment" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout> 
+                
+                <VerticalStackLayout>
+                    <Image Source="icon.png" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Repost" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+                <VerticalStackLayout>
+                    <Image Source="icon.png" HeightRequest="30" WidthRequest="30"/>
+                    <Label Text="Send" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center"/>
+                </VerticalStackLayout>
+
+
+            </HorizontalStackLayout>
+            
+            
+
+        </StackLayout>
+
+        <!--<StackLayout Grid.Row="0"  Orientation="Vertical">
+            <Label Text="Vertical Stack layout"/>
+
+            <HorizontalStackLayout>
+                <Image Source="icon.png" HeightRequest="50" WidthRequest="50"/>
+                <Image Source="icon.png" HeightRequest="50" WidthRequest="50"/>
+                <Image Source="icon.png" HeightRequest="50" WidthRequest="50"/>
+                <Image Source="icon.png" HeightRequest="50" WidthRequest="50"/>
+                               
+
+
+            </HorizontalStackLayout>
+
+        </StackLayout>-->
+        <!--<VerticalStackLayout Grid.Row="1" BackgroundColor="Red"/>
+        <VerticalStackLayout Grid.Row="2" BackgroundColor="Purple"/>-->
+
+    </Grid>
 </ContentPage> 
