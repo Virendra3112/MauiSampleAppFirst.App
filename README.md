@@ -5,8 +5,8 @@
 | Sr. #  | Features | Status | 
 | ------------- | ------------- | ------ |
 | 1. | Tabs  |  ✔️ |
-| 2. | Horizontal and Vertical Layout |  🔜  |
-| 3. | Drawer  | 🔜 |
-| 4. | Collection View | 🔜 |
+| 2. | Collection View | 🔜 |
+| 3. | Horizontal and Vertical Layout |  🔜  |
+| 4. | Drawer  | 🔜 |
 | 5. | Date & Time picker | 🔜 |
 
