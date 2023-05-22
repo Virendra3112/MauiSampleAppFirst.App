@@ -78,6 +78,16 @@ namespace MauiSampleAppFirst.Views
                             Navigation.PushAsync(new LayoutsPage(),true);
 
                             break;
+                        } 
+                    
+                    case "FlyoutPage":
+                        {
+                            Navigation.PushAsync(new FlyoutSamplePage(),true);
+
+
+                           // MainPage = new FlyoutSamplePage();
+
+                            break;
                         }
                         
                     default:
