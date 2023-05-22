@@ -50,6 +50,9 @@
 
 	<ItemGroup>
 	  <None Remove="Platforms\Android\Resources\drawable\icon.png" />
+	  <None Remove="Resources\Images\contacts.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\settings.png" />
 	</ItemGroup>
 
 	<ItemGroup>

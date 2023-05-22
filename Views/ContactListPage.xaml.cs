@@ -6,4 +6,9 @@ public partial class ContactListPage : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    protected override bool OnBackButtonPressed()
+    {
+        return false;
+    }
 }

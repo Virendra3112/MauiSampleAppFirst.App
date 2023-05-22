@@ -11,9 +11,9 @@ public partial class FlyoutMenuPage : ContentPage
     public FlyoutMenuPage()
 	{
 		InitializeComponent();
-        flyoutPageItems.Add(new FlyoutPageItem { Title = "Home", MenuIcon = "Home.png" });
-        flyoutPageItems.Add(new FlyoutPageItem { Title = "Contacts", MenuIcon = "Contacts.png" });
-        flyoutPageItems.Add(new FlyoutPageItem { Title = "Settings", MenuIcon = "Settings.png" });
+        flyoutPageItems.Add(new FlyoutPageItem { Title = "Home", MenuIcon = "home.png" });
+        flyoutPageItems.Add(new FlyoutPageItem { Title = "Contacts", MenuIcon = "contacts.png" });
+        flyoutPageItems.Add(new FlyoutPageItem { Title = "Settings", MenuIcon = "settings.png" });
 
         collectionViewFlyout.ItemsSource = flyoutPageItems;
     }

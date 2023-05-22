@@ -4,31 +4,31 @@
              xmlns:local="clr-namespace:MauiSampleAppFirst.Models"
              xmlns:pages="clr-namespace:MauiSampleAppFirst.Views"
              x:Class="MauiSampleAppFirst.Views.FlyoutMenuPage"
-             Padding="0" BackgroundColor="#494949"
+             Padding="0" BackgroundColor="#f1f1f1"
              IconImageSource="hamburger.png"
              Title="Personal Organiser">
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                 Spacing="10" Margin="10,20">
 
-        <HorizontalStackLayout HorizontalOptions="FillAndExpand" Spacing="5">
+        <HorizontalStackLayout HorizontalOptions="FillAndExpand" Spacing="5" >
         <Image Aspect="AspectFit" Source="dotnet_bot.png"
                HeightRequest="50" WidthRequest="50"
                VerticalOptions="Center" HorizontalOptions="Start" />
 
             <Label Text="Virendra Thakur"
-               FontSize="Large" TextColor="White"
+               FontSize="Large" TextColor="Black"
                FontAttributes="Bold" VerticalOptions="Center"/>
 
         </HorizontalStackLayout>
     
-        <BoxView HeightRequest="1" BackgroundColor="Red"/>
+        <BoxView HeightRequest="1" BackgroundColor="White"/>
 
         <CollectionView x:Name="collectionViewFlyout"
                     x:FieldModifier="public"
                     SelectionMode="Single">
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Grid Padding="5,10">
+                    <Grid Padding="5,10" >
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="30"/>
                         <ColumnDefinition Width="*" />
@@ -37,7 +37,7 @@
                     <Label Grid.Column="1"
                            Margin="20,0"
                            Text="{Binding Title}"
-                           FontSize="20" TextColor="White"
+                           FontSize="20" TextColor="Black"
                            FontAttributes="Bold"
                            VerticalOptions="Center" />
                     
@@ -46,5 +46,8 @@
             </DataTemplate>
         </CollectionView.ItemTemplate>
     </CollectionView>
+        
+        <BoxView HeightRequest="1" BackgroundColor="White"/>
+
     </StackLayout>
 </ContentPage>
