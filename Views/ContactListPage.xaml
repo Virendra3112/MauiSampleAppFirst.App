@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.ContactListPage"
-             Title="ContactListPage" BackgroundColor="Black" NavigationPage.HasBackButton="True"
+             Title="Contacts" BackgroundColor="Black" NavigationPage.HasBackButton="True"
              >
 
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Margin="0" Padding="0" Spacing="0" >

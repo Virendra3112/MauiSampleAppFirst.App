@@ -6,7 +6,7 @@
              x:Class="MauiSampleAppFirst.Views.FlyoutMenuPage"
              Padding="0" BackgroundColor="#f1f1f1"
              IconImageSource="hamburger.png"
-             Title="Personal Organiser">
+             Title=" ">
     <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"
                 Spacing="10" Margin="10,20">
 
