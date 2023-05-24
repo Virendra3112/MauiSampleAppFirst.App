@@ -27,11 +27,14 @@ public partial class FlyoutSamplePage : FlyoutPage
                         break;
                 
                     case "Contacts":
-                        Detail = new NavigationPage(new ContactListPage());
-                        break; 
+                    Detail = new NavigationPage(new ContactListPage());
+
+                    break; 
                 
                     case "Settings":
-                        break;
+                    Detail = new NavigationPage(new SettingsPage());
+
+                    break;
                 }
             }
         }
