@@ -5,13 +5,92 @@
              Title="Contacts" BackgroundColor="Black" NavigationPage.HasBackButton="True"
              >
 
-    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"  Margin="0" Padding="0" Spacing="0" >
+    <Grid Margin="5">
         
-        
-        <Label 
-            Text="Welcome to Contacts Page"
-            TextColor="White" FontAttributes="Bold" FontSize="Large"
-            VerticalOptions="CenterAndExpand"    
-            HorizontalOptions="CenterAndExpand" />
-    </StackLayout>
+
+
+        <CollectionView x:Name="contactsCollectionView" IsGrouped="False" >
+
+            <!--CollectionView Group header-->
+
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label  Text="{Binding Name}" TextColor="Red"
+                   BackgroundColor="LightGray"
+                   FontSize="18"
+                   FontAttributes="Bold" />
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <ContentView>
+
+                        <Grid Padding="10, 8, 18, 7">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0">
+                                <Image Source="dotnet_bot.png" VerticalOptions="Center"
+                                    HorizontalOptions="Center" WidthRequest="48" HeightRequest="48">
+                                    <Image.Clip>
+                                        <EllipseGeometry RadiusX="24" RadiusY="24" Center="24, 24" />
+                                    </Image.Clip>
+                                </Image>
+                                <Ellipse Margin="0"
+                                 Fill="Transparent"
+                                 Stroke="LightGray" 
+                                 StrokeThickness="1"
+                                 HeightRequest="50"
+                                 WidthRequest="50"
+                                 VerticalOptions="Center"
+                                 HorizontalOptions="Center">
+                                </Ellipse>
+                            </Grid>
+                            <StackLayout Grid.Column="1"
+                             Padding="18,1,18,7"
+                             Orientation="Vertical">
+                                <Label Text="{Binding Name}"
+                           Margin="0,2"
+                           TextColor="#55575c"/>
+                                <Label Text="{Binding Phone}"
+                               TextColor="#959aa0"/>
+                            </StackLayout>
+                        </Grid>
+                        
+                    </ContentView>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <!--CollectionView Header-->
+
+
+            <!--<CollectionView.HeaderTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="2, 0, 18, 10">
+                        <Label FontFamily="Roboto-Medium"
+                       Margin="0,20,0,1"
+                       TextColor="#FF0000"
+                       Text="ddd"/>
+                        <BoxView BackgroundColor="#ebebeb" 
+                         HeightRequest="1"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.HeaderTemplate>-->
+
+            <!--CollectionView Footer-->
+
+            <!--<CollectionView.GroupFooterTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Count, StringFormat='Total contacts: {0:D}'}"
+                   Margin="0,0,0,10" />
+                </DataTemplate>
+            </CollectionView.GroupFooterTemplate>-->
+
+        </CollectionView>
+
+    </Grid>
 </ContentPage>
