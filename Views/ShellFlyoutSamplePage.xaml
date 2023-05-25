@@ -4,16 +4,16 @@
        xmlns:views="clr-namespace:MauiSampleAppFirst.Views"
        xmlns:sys="clr-namespace:System;assembly=netstandard"
        x:Class="MauiSampleAppFirst.Views.ShellFlyoutSamplePage">
-    <FlyoutItem Title="Cats"
+    <FlyoutItem Title="Contacts"
                 Icon="icon.png">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate views:ContactListPage}" />
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="Dogs"
+    <FlyoutItem Title="Settings"
                 Icon="icon.png">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate views:SecondTabPage}" />
+            <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </FlyoutItem>
     <Shell.FlyoutHeader>
@@ -21,7 +21,7 @@
             <Image Aspect="AspectFill"
                Source="store.jpg"
                Opacity="0.6" />
-            <Label Text="Animals"
+            <Label Text="Welcome User"
                TextColor="White"
                FontAttributes="Bold"
                HorizontalTextAlignment="Center"
@@ -31,7 +31,7 @@
 
     <Shell.FlyoutFooter>
         <StackLayout>
-            <Label Text=".Net MAUI"
+            <Label Text=".Net MAUI Virendra Thakur"
                TextColor="Black"
                FontAttributes="Bold"
                HorizontalOptions="Center" />
