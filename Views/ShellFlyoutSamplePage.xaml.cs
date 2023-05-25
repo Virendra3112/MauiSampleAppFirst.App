@@ -1,6 +1,6 @@
 namespace MauiSampleAppFirst.Views;
 
-public partial class ShellFlyoutSamplePage : ContentPage
+public partial class ShellFlyoutSamplePage : Shell
 {
 	public ShellFlyoutSamplePage()
 	{
