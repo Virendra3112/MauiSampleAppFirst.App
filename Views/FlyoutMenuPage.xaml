@@ -4,6 +4,7 @@
              xmlns:local="clr-namespace:MauiSampleAppFirst.Models"
              xmlns:pages="clr-namespace:MauiSampleAppFirst.Views"
              x:Class="MauiSampleAppFirst.Views.FlyoutMenuPage"
+             xmlns:system="clr-namespace:System;assembly=netstandard"
              Padding="0" BackgroundColor="#f1f1f1"
              IconImageSource="hamburger.png"
              Title=" ">
@@ -15,9 +16,19 @@
                HeightRequest="50" WidthRequest="50"
                VerticalOptions="Center" HorizontalOptions="Start" />
 
-            <Label Text="Virendra Thakur"
+            <Label
                FontSize="Large" TextColor="Black"
-               FontAttributes="Bold" VerticalOptions="Center"/>
+               FontAttributes="Bold" VerticalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span Text="Welcome"/>
+                            <Span Text="{x:Static system:Environment.NewLine}"/>
+                            <Span Text="Virendra Thakur"/>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
 
         </HorizontalStackLayout>
     
@@ -48,6 +59,16 @@
     </CollectionView>
         
         <BoxView HeightRequest="1" BackgroundColor="White"/>
+
+        <StackLayout VerticalOptions="EndAndExpand">
+            <Label Text=".Net MAUI Virendra Thakur"
+               TextColor="Black"
+               FontAttributes="Bold"
+               HorizontalOptions="Center" />
+            <Label Text="{Binding Source={x:Static system:DateTime.Now}, StringFormat='{0:MMMM dd, yyyy}'}"
+               TextColor="Black"
+               HorizontalOptions="Center" />
+        </StackLayout>
 
     </StackLayout>
 </ContentPage>
