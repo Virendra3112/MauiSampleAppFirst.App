@@ -15,7 +15,8 @@
             <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </FlyoutItem>
-    
+
+    <!--FlyoutHeader-->
     <Shell.FlyoutHeader>
         <Grid BackgroundColor="Black">
             <Image Aspect="AspectFill"
@@ -37,6 +38,7 @@
         </Grid>
     </Shell.FlyoutHeader>
 
+    <!--FlyoutFooter-->
     <Shell.FlyoutFooter>
         <StackLayout BackgroundColor="#c1c1c1">
             <Label Text=".Net MAUI Virendra Thakur"
