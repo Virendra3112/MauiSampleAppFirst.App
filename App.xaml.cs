@@ -8,9 +8,11 @@ public partial class App : Application
 	{
 		InitializeComponent();
 
-		//MainPage = new AppShell();
+        //MainPage = new AppShell();
 
-		MainPage = new FlyoutSamplePage();
+        //MainPage = new FlyoutSamplePage();
+
+        MainPage = new ShellFlyoutSamplePage();
 
         Routing.RegisterRoute("DashboardTabPage/CollectionViewSamplePage", typeof(CollectionViewSamplePage));
 
