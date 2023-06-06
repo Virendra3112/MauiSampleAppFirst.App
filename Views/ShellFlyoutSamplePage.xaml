@@ -4,7 +4,8 @@
        xmlns:views="clr-namespace:MauiSampleAppFirst.Views"
        xmlns:sys="clr-namespace:System;assembly=netstandard"
        xmlns:system="clr-namespace:System;assembly=netstandard"
-       x:Class="MauiSampleAppFirst.Views.ShellFlyoutSamplePage">
+       x:Class="MauiSampleAppFirst.Views.ShellFlyoutSamplePage"
+       FlyoutBackdrop="Black" >
     <FlyoutItem Title="Contacts"  Icon="icon.png">
         <Tab>
             <ShellContent ContentTemplate="{DataTemplate views:ContactListPage}" />
@@ -15,6 +16,18 @@
             <ShellContent ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </FlyoutItem>
+
+    <!--<Shell.FlyoutBackdrop>
+        <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,1">    
+            <GradientStop Color="#8A2387"
+                          Offset="0.1" />
+            <GradientStop Color="#E94057"
+                          Offset="0.6" />
+            <GradientStop Color="#F27121"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </Shell.FlyoutBackdrop>-->
 
     <!--FlyoutHeader-->
     <Shell.FlyoutHeader>
