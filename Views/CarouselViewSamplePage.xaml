@@ -2,11 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.CarouselViewSamplePage"
-             Title="CarouselViewSamplePage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+             Title="CarouselViewSamplePage" BackgroundColor="#3f3f3f">
+    <VerticalStackLayout Padding="5">
+        <CarouselView x:Name="carouselView">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Frame>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding PlayerName}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center"/>
+                            <Image WidthRequest="150" HeightRequest="150" Source="{Binding PlayerImage}" />
+                            <Label Text="{Binding Country}" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
     </VerticalStackLayout>
 </ContentPage>
