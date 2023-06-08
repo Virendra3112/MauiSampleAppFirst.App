@@ -21,17 +21,13 @@ public partial class CarouselViewSamplePage : ContentPage
 
     private void LoadData()
     {
-        players.Add(new Player { PlayerId = 1, PlayerName = "Virat Kohi", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 2, PlayerName = "Rohit Sharma", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 3, PlayerName = "Shubhman Gill", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 4, PlayerName = "Shikhar Dhawan", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 5, PlayerName = "Suryakumar Yadav", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 6, PlayerName = "MahendraSingh Dhoni", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 7, PlayerName = "Jasprit Bumrah", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 8, PlayerName = "Hardik Pandya", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 9, PlayerName = "Shreyes Iyer", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 10, PlayerName = "Rishabh Pant", PlayerImage = "icon.png", Country = "INDIA" });
-        players.Add(new Player { PlayerId = 11, PlayerName = "Rvindra Jadeja", PlayerImage = "icon.png", Country = "INDIA" });
+        players.Add(new Player {  PlayerImage = "https://img.freepik.com/free-vector/digital-technology-search-engine-optimization-website-constructor_335657-2471.jpg"});
+        players.Add(new Player {  PlayerImage = "https://www.kasandbox.org/programming-images/avatars/spunky-sam-green.png", });
+        players.Add(new Player {  PlayerImage  = "https://www.kasandbox.org/programming-images/avatars/marcimus-red.png" });
+        players.Add(new Player {  PlayerImage = "https://www.kasandbox.org/programming-images/avatars/old-spice-man-blue.png" });
+        players.Add(new Player {  PlayerImage  = "https://www.kasandbox.org/programming-images/avatars/mr-pants-purple.png" });
+        players.Add(new Player {  PlayerImage = "https://www.kasandbox.org/programming-images/avatars/old-spice-man.png" });
+       
 
         carouselView.ItemsSource = players;
 
