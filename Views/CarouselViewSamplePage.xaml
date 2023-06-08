@@ -3,19 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.CarouselViewSamplePage"
              Title="CarouselViewSamplePage" BackgroundColor="#3f3f3f">
-    <VerticalStackLayout Padding="5">
-        <CarouselView x:Name="carouselView">
+    <StackLayout Padding="5" VerticalOptions="CenterAndExpand">
+        <CarouselView x:Name="carouselView" IndicatorView="indicatorView" >
             <CarouselView.ItemTemplate>
                 <DataTemplate>
-                    <Frame>
+                    <Frame BackgroundColor="#f1f1f1" CornerRadius="20" Padding="0" VerticalOptions="CenterAndExpand" HeightRequest="500"  >
                         <VerticalStackLayout>
-                            <Label Text="{Binding PlayerName}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center"/>
-                            <Image WidthRequest="150" HeightRequest="150" Source="{Binding PlayerImage}" />
-                            <Label Text="{Binding Country}" HorizontalTextAlignment="Center" />
+                            <Label Text="{Binding PlayerName}" TextColor="White" FontAttributes="Bold" FontSize="Large" HorizontalTextAlignment="Center"/>
+                            <Image WidthRequest="400" HeightRequest="400" Source="{Binding PlayerImage}" />
+                            <Label Text="{Binding Country}" TextColor="White" FontSize="Medium" HorizontalTextAlignment="Center" />
                         </VerticalStackLayout>
                     </Frame>
                 </DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>
-    </VerticalStackLayout>
+ 
+        <IndicatorView x:Name="indicatorView" Margin="10" IndicatorSize="10"
+                   IndicatorColor="Black"
+                   SelectedIndicatorColor="DarkGray"
+                   HorizontalOptions="Center" />
+    </StackLayout>
 </ContentPage>
