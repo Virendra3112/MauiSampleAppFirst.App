@@ -12,7 +12,7 @@ public partial class App : Application
 
         //MainPage = new FlyoutSamplePage();
 
-        MainPage = new ShellFlyoutSamplePage();
+        MainPage = new CarouselViewSamplePage();
 
         Routing.RegisterRoute("DashboardTabPage/CollectionViewSamplePage", typeof(CollectionViewSamplePage));
 
