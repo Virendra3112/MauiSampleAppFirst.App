@@ -4,9 +4,27 @@
              x:Class="MauiSampleAppFirst.Views.DateTimePickerSamplePage"
              Title="DateTimePickerSamplePage">
     <VerticalStackLayout>
+        
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="Select Time"
             VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            HorizontalOptions="Center"
+            TextColor="Black" FontSize="Medium"
+            FontAttributes="Bold"/>
+
+        <TimePicker x:Name="timePicker" BackgroundColor="Gray" />
+
+
+        <Label 
+            Text="Select Date"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            TextColor="Black" FontSize="Medium"
+            FontAttributes="Bold"/>
+
+        <DatePicker x:Name="datePicker" BackgroundColor="Gray"  />
+
+
+
     </VerticalStackLayout>
 </ContentPage>
