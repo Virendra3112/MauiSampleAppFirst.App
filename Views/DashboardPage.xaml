@@ -3,10 +3,63 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.DashboardPage"
              Title="DashboardPage">
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid RowSpacing="0" BackgroundColor="LightGray" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="9*" />
+
+        </Grid.RowDefinitions>
+        
+
+        <!--<StackLayout Grid.Row="0" BackgroundColor="Yellow"/>
+        <StackLayout Grid.Row="1" BackgroundColor="Red"/>-->
+
+        <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="End">
+
+            <Label Text="Theme" TextColor="Black" FontSize="Small" Padding="5"/>
+            <Switch HorizontalOptions="Start" VerticalOptions="Start"/>
+
+        </StackLayout>
+
+        <ScrollView Grid.Row="1">
+
+            <FlexLayout
+                    Wrap="Wrap" x:Name="flexLayout"
+                    Direction="Row"
+                    JustifyContent="Center"
+                    AlignItems="Center" BackgroundColor="Transparent"
+                    AlignContent="Start">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout FlexLayout.Basis="Auto">
+                        <StackLayout Margin="0" Padding="10" Spacing="5">
+                            <Frame Margin="0" Padding="0,20" CornerRadius="12" HeightRequest="120" WidthRequest="120" BackgroundColor="Black">
+                                <FlexLayout Direction="Column" AlignItems="Center">
+                                    <Image Source="icon.png" WidthRequest="50" HeightRequest="50"/>
+                                    <Label Text="{Binding Title}" FontSize="Small"  TextColor="White"
+                                             HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  LineBreakMode="CharacterWrap" MaxLines="2"/>
+                                </FlexLayout>
+
+                            </Frame>
+                        </StackLayout>
+
+                        </StackLayout>
+                        <!--<Grid FlexLayout.Basis="{OnIdiom Phone='35%'}" BackgroundColor="Gray">
+                            <Frame Margin="10" Padding="0,20" CornerRadius="5" HeightRequest="80" WidthRequest="80" BackgroundColor="red">
+                                <FlexLayout Direction="Column" AlignItems="Center">
+                                    <Image Source="icon.png" WidthRequest="50" HeightRequest="50"/>
+                                    <Label Text="{Binding Title}" FontSize="Small"  TextColor="Black"
+                                             HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  LineBreakMode="CharacterWrap" MaxLines="2"/>
+                                </FlexLayout>
+                               
+                            </Frame>
+                        </Grid>-->
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+            </FlexLayout>
+        </ScrollView>
+
+
+
+    </Grid>
 </ContentPage>
