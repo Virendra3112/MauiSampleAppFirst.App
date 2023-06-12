@@ -7,12 +7,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="9*" />
-
         </Grid.RowDefinitions>
         
-
-        <!--<StackLayout Grid.Row="0" BackgroundColor="Yellow"/>
-        <StackLayout Grid.Row="1" BackgroundColor="Red"/>-->
 
         <StackLayout Grid.Row="0" Orientation="Horizontal" HorizontalOptions="End">
 
