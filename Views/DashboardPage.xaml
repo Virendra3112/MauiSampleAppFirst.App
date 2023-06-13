@@ -27,7 +27,7 @@
                     AlignContent="Start">
                 <BindableLayout.ItemTemplate>
                     <DataTemplate>
-                        <StackLayout FlexLayout.Basis="Auto">
+                        <StackLayout FlexLayout.Basis="{OnIdiom Phone='100%'}">
                         <StackLayout Margin="0" Padding="10" Spacing="5">
                             <Frame Margin="0" Padding="0,20" CornerRadius="12" HeightRequest="120" WidthRequest="120" BackgroundColor="Black">
                                 <FlexLayout Direction="Column" AlignItems="Center">
@@ -35,6 +35,9 @@
                                     <Label Text="{Binding Title}" FontSize="Small"  TextColor="White"
                                              HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"  LineBreakMode="CharacterWrap" MaxLines="2"/>
                                 </FlexLayout>
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" CommandParameter="{Binding .}" />
+                                    </Frame.GestureRecognizers>
 
                             </Frame>
                         </StackLayout>
