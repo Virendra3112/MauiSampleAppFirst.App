@@ -1,8 +1,12 @@
 ﻿namespace MauiSampleAppFirst.Helpers
 {
-    public interface ISQLiteOperations<T>
+    public interface ISQLiteOperations<T> where T : class, new()
     {
-        IEnumerable<T> GetItems();
-        T GetItemById(int id);
+        Task<List<T>> GetAllAsync();
+
+        Task<int> InsertAsync(T entity);
+
+        Task<int> DeleteAsync(T entity);
+
     }
 }
