@@ -4,13 +4,14 @@ namespace MauiSampleAppFirst.Helpers
 {
     public class SQLiteHelper
     {
-        SQLiteAsyncConnection Database;
+        public static SQLiteAsyncConnection Database;
 
         public SQLiteHelper()
         {
+            //Init();
         }
 
-        async Task Init()
+        public async Task Init()
         {
             if (Database is not null)
                 return;
