@@ -1,21 +1,34 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
 
 namespace MauiSampleAppFirst.Helpers
 {
-    public class SQLiteOperations<T> : ISQLiteOperations<T>
+    public class SQLiteOperations<T> : ISQLiteOperations<T> where T : class, new()
     {
-        public T GetItemById(int id)
+        SQLiteAsyncConnection DBConnection;
+
+        public SQLiteOperations()
         {
-            throw new NotImplementedException();
+            if (DBConnection is not null)
+                return;
+
+            DBConnection = new SQLiteAsyncConnection(AppConstants.DatabasePath, AppConstants.Flags);
         }
 
-        public IEnumerable<T> GetItems()
+
+
+        public async Task<List<T>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await DBConnection.Table<T>().ToListAsync();
+        }
+
+        public async Task<int> InsertAsync(T entity)
+        {
+            return await DBConnection.InsertAsync(entity);
+        }
+
+        public async Task<int> DeleteAsync(T entity)
+        {
+            return await DBConnection.UpdateAsync(entity);
         }
     }
 }
