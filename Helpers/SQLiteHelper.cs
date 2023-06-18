@@ -8,7 +8,6 @@ namespace MauiSampleAppFirst.Helpers
 
         public SQLiteHelper()
         {
-            //Init();
         }
 
         public async Task Init()
