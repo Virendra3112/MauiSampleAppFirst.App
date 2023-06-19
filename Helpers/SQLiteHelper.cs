@@ -1,4 +1,5 @@
-﻿using SQLite;
+﻿using MauiSampleAppFirst.Models;
+using SQLite;
 
 namespace MauiSampleAppFirst.Helpers
 {
@@ -16,7 +17,7 @@ namespace MauiSampleAppFirst.Helpers
                 return;
 
             Database = new SQLiteAsyncConnection(AppConstants.DatabasePath, AppConstants.Flags);
-            //var result = await Database.CreateTableAsync<TodoItem>();
+            var result = await Database.CreateTableAsync<Player>();
         }
     }
 }
