@@ -1,3 +1,4 @@
+using MauiSampleAppFirst.Models;
 using System.Collections.ObjectModel;
 
 namespace MauiSampleAppFirst.Views;
