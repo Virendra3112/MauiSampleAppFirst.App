@@ -18,7 +18,7 @@ public partial class DashboardPage : ContentPage
         CategoryList.Add(new FlyoutPageItem { Title = "CarouselView", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "DateTime picker", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "Contacts list", MenuIcon = "settings.png" });
-        //CategoryList.Add(new FlyoutPageItem { Title = "Map", MenuIcon = "settings.png" });
+        CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png" });
 
         BindableLayout.SetItemsSource(flexLayout, CategoryList);
     }
@@ -59,10 +59,10 @@ public partial class DashboardPage : ContentPage
                 case "Contacts list":
                     Navigation.PushAsync(new ContactListPage());
                     break;
-                
-                //case "Map":
-                //    Navigation.PushAsync(new ContactListPage());
-                //    break;
+
+                case "SQLite Operations":
+                    Navigation.PushAsync(new DatabaseOperationsSamplePage());
+                    break;
             }
         }
     }
