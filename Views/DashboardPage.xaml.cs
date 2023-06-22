@@ -11,6 +11,8 @@ public partial class DashboardPage : ContentPage
     {
         InitializeComponent();
 
+
+        CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "CollectionView", MenuIcon = "contacts.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "Tabs", MenuIcon = "contacts.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "Flyout", MenuIcon = "settings.png" });
@@ -18,7 +20,7 @@ public partial class DashboardPage : ContentPage
         CategoryList.Add(new FlyoutPageItem { Title = "CarouselView", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "DateTime picker", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "Contacts list", MenuIcon = "settings.png" });
-        CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png" });
+        //CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png" });
 
         BindableLayout.SetItemsSource(flexLayout, CategoryList);
     }
