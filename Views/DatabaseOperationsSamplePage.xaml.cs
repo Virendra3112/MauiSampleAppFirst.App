@@ -21,11 +21,14 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         base.OnAppearing();
 
-       // var addData = DependencyService.Get<ISQLiteOperations<Player>>();
+        var addData = DependencyService.Get<ISQLiteOperations<Player>>();
 
-        //var et = await addData.GetAllAsync();
+        var _list = await addData.GetAllAsync();
 
-        //var test =  await SQLiteHelper.Database.GetAsync<Player>(1);
+        if (_list.Any())
+        {
+            playersCollectionView.ItemsSource = new ObservableCollection<Player>(_list);
+        }
     }
 
     private void Button_Clicked(object sender, EventArgs e)
