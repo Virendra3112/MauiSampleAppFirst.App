@@ -19,13 +19,25 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         base.OnAppearing();
 
-        var addData = DependencyService.Get<ISQLiteOperations<Player>>();
+        await GetDataAsync();
+    }
 
-        var _list = await addData.GetAllAsync();
-
-        if (_list.Any())
+    private async Task GetDataAsync()
+    {
+        try
         {
-            playersCollectionView.ItemsSource = new ObservableCollection<Player>(_list);
+            var addData = DependencyService.Get<ISQLiteOperations<Player>>();
+
+            var _list = await addData.GetAllAsync();
+
+            if (_list.Any())
+            {
+                playersCollectionView.ItemsSource = new ObservableCollection<Player>(_list);
+            }
+        }
+        catch (Exception ex)
+        {
+
         }
     }
 
@@ -51,6 +63,8 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 
                 var addData = DependencyService.Get<ISQLiteOperations<Player>>();
                 await addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
+
+                await GetDataAsync();
             }
 
             else
