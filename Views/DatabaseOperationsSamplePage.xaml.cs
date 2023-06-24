@@ -9,8 +9,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     ObservableCollection<Player> players = new ObservableCollection<Player>();
     public ObservableCollection<Player> Players { get { return players; } }
 
-    //bool isAddPopupVisible = false;
-    //public bool IsAddPopupVisible { get { return isAddPopupVisible; } }
     public DatabaseOperationsSamplePage()
     {
         InitializeComponent();
@@ -36,7 +34,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
         AddDataPopup.IsVisible = true;
     }
 
-    private void Submit_Button_Clicked(object sender, EventArgs e)
+    private async void Submit_Button_Clicked(object sender, EventArgs e)
     {
         try
         {
@@ -52,18 +50,13 @@ public partial class DatabaseOperationsSamplePage : ContentPage
             {
 
                 var addData = DependencyService.Get<ISQLiteOperations<Player>>();
-
-                addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
-
+                await addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
             }
 
             else
             {
-                //error popup
+                await DisplayAlert("Error", "Please add data and try again", "ok ");
             }
-
-
-            //refresh data 
         }
         catch (Exception ex)
         {
