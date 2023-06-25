@@ -22,7 +22,10 @@ public partial class App : Application
 
         SQLiteHelper.Init();
 
-        DependencyService.Register<ISQLiteOperations<Player>, SQLiteOperations<Player>>();
+        //DependencyService.Register<ISQLiteOperations<Player>, SQLiteOperations<Player>>();
+
+        var service = new SQLiteOperations<Player>();
+        DependencyService.RegisterSingleton<ISQLiteOperations<Player>>(service);
 
 
         //Routing.RegisterRoute("DashboardTabPage/CollectionViewSamplePage", typeof(CollectionViewSamplePage));
