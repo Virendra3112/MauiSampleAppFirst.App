@@ -7,10 +7,6 @@ namespace MauiSampleAppFirst.Helpers
     {
         public static SQLiteAsyncConnection Database;
 
-        //public SQLiteHelper()
-        //{
-        //}
-
         public static async Task Init()
         {
             if (Database is not null)
