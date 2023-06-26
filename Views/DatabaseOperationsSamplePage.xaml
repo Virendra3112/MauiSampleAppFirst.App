@@ -23,14 +23,6 @@
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
 
-                                <!--<Ellipse Stroke="White" Grid.RowSpan="2" 
-                                     WidthRequest="60"
-                                     HeightRequest="60"
-                                     HorizontalOptions="Start"
-                                     Fill="WhiteSmoke" 
-                                     StrokeThickness="1" 
-                                     Margin="0,0,10,0"/>-->
-
                                 <Image Source="icon.png" Grid.RowSpan="2"
                                        HeightRequest="60" WidthRequest="60"
                                        Margin="0,0,10,0"/>
