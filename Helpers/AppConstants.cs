@@ -3,7 +3,7 @@
     public static class AppConstants
     {
 
-        public const string DatabaseFilename = "MyDB.db3";
+        public const string DatabaseFilename = "MAUIDB.db3";
 
         public const SQLite.SQLiteOpenFlags Flags =
             // open the database in read/write mode
