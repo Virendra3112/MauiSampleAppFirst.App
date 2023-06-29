@@ -11,24 +11,27 @@ namespace MauiSampleAppFirst.Helpers
             //SQLiteHelper = new SQLiteHelper();
         }
 
-
-
         public async Task<List<T>> GetAllAsync()
         {
-            //await SQLiteHelper.Init();
             return await SQLiteHelper.Database.Table<T>().ToListAsync();
         }
 
         public async Task<int> InsertAsync(T entity)
         {
-            //await SQLiteHelper.Init();
             return await SQLiteHelper.Database.InsertAsync(entity);
         }
 
         public async Task<int> DeleteAsync(T entity)
         {
-            //await SQLiteHelper.Init();
+            return await SQLiteHelper.Database.DeleteAsync(entity);
+        } 
+        
+        public async Task<int> UpdateAsync(T entity)
+        {
             return await SQLiteHelper.Database.UpdateAsync(entity);
+            //return await SQLiteHelper.Database.InsertOrReplaceAsync(entity);
         }
+
+
     }
 }
