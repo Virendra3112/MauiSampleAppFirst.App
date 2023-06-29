@@ -8,5 +8,8 @@
 
         Task<int> DeleteAsync(T entity);
 
+        Task<int> UpdateAsync(T entity);
+
+
     }
 }
