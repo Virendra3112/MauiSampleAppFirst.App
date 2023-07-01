@@ -33,14 +33,7 @@ namespace MauiSampleAppFirst.Helpers
         }
         public async Task<List<T>> QueryAsync(T entity, string query, object[] param)
         {
-            //return await Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-
            return await SQLiteHelper.Database.QueryAsync<T>(query, param);
-            //return await SQLiteHelper.Database.InsertOrReplaceAsync(entity);
         }
-
-        
-
-
     }
 }
