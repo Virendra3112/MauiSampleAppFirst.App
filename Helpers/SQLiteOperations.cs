@@ -35,5 +35,10 @@ namespace MauiSampleAppFirst.Helpers
         {
            return await SQLiteHelper.Database.QueryAsync<T>(query, param);
         }
+
+        public async Task<T> GetItemAsync(T entity)
+        {
+            return await SQLiteHelper.Database.FindAsync<T>(entity);
+        }
     }
 }
