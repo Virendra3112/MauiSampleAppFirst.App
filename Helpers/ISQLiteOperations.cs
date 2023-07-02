@@ -11,6 +11,8 @@
         Task<int> UpdateAsync(T entity);
         Task<List<T>> QueryAsync(T entity, string query, object[] param);
 
+        Task<T> GetItemAsync(T entity);
+
 
     }
 }
