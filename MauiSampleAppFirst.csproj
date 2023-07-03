@@ -125,8 +125,4 @@
 	  </MauiXaml>
 	</ItemGroup>
 
-	<ItemGroup>
-	  <Folder Include="Platforms\Android\CustomRenderer\" />
-	</ItemGroup>
-
 </Project>
