@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiSampleAppFirst.Views.DashboardPage"
+             xmlns:local="clr-namespace:MauiSampleAppFirst.Controls"
              Title="DashboardPage">
     <Grid RowSpacing="0" BackgroundColor="LightGray" >
         <Grid.RowDefinitions>
@@ -14,6 +15,8 @@
 
             <Label Text="Theme" TextColor="Black" FontSize="Small" Padding="5"/>
             <Switch HorizontalOptions="Start" VerticalOptions="Start"/>
+
+            <!--<local:CustomHtmlLabel x:Name="customLabel"/>-->
 
         </StackLayout>
 

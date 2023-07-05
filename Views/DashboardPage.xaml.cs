@@ -11,6 +11,10 @@ public partial class DashboardPage : ContentPage
     {
         InitializeComponent();
 
+        var test = "<h1>This is a Heading </br> </br> test</h1>\r\n<p>This is a paragraph.</p>";
+
+        //customLabel.Text = test;
+
 
         CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png" });
         CategoryList.Add(new FlyoutPageItem { Title = "CollectionView", MenuIcon = "contacts.png" });
