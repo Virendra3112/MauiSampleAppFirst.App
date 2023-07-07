@@ -11,11 +11,6 @@ public partial class DashboardPage : ContentPage
     {
         InitializeComponent();
 
-        var test = "<h1>This is a Heading </br> </br> test</h1>\r\n<p>This is a paragraph.</p>";
-
-        //customLabel.Text = test;
-
-
         CategoryList.Add(new FlyoutPageItem { Title = "SQLite Operations", MenuIcon = "settings.png", Page = new DatabaseOperationsSamplePage() });
         CategoryList.Add(new FlyoutPageItem { Title = "CollectionView", MenuIcon = "contacts.png", Page = new CollectionViewSamplePage() });
         CategoryList.Add(new FlyoutPageItem { Title = "Tabs", MenuIcon = "contacts.png", Page = new AppShell() });
@@ -36,46 +31,7 @@ public partial class DashboardPage : ContentPage
         if (item != null)
         {
             if (item.Page != null)
-                NavigateTo(item.Page);
-
-            //switch (item.Title)
-            //{
-            //    case "CollectionView":
-            //        Navigation.PushAsync(new CollectionViewSamplePage());
-            //        break;
-
-            //    case "Tabs":
-            //        Navigation.PushAsync(new AppShell());
-            //        break;
-
-            //    case "Flyout":
-            //        Navigation.PushAsync(new FlyoutSamplePage());
-            //        break;
-
-            //    case "Shell Flyout":
-            //        Navigation.PushAsync(new ShellFlyoutSamplePage());
-            //        break;
-
-            //    case "CarouselView":
-            //        Navigation.PushAsync(new CarouselViewSamplePage());
-
-            //        break;
-            //    case "DateTime picker":
-            //        Navigation.PushAsync(new DateTimePickerSamplePage());
-            //        break;
-
-            //    case "Contacts list":
-            //        Navigation.PushAsync(new ContactListPage());
-            //        break;
-
-            //    case "SQLite Operations":
-            //        Navigation.PushAsync(new DatabaseOperationsSamplePage());
-            //        break;
-
-            //    case "Shapes":
-            //        Navigation.PushAsync(new ShapesSamplePage());
-            //        break;
-            //}
+                NavigateTo(item.Page); 
         }
     }
 
