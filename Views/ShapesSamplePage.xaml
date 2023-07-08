@@ -27,18 +27,21 @@
       StrokeThickness="15" />
         
 
-        <Polygon Points="100,200 100,300 80,170"
+        <Polygon Points="20,20 100,40,80,20"
          Fill="Black"
          Stroke="Blue"
          StrokeThickness="10" />
 
+        <HorizontalStackLayout BackgroundColor="Black" HorizontalOptions="FillAndExpand">
 
         <Polyline Points="0,0 10,30 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
           Stroke="Red" />
 
+        </HorizontalStackLayout>
+
         <Rectangle Fill="Green"
-           WidthRequest="200"
-           HeightRequest="400"
+           WidthRequest="100"
+           HeightRequest="200"
            HorizontalOptions="Center" />
 
     </VerticalStackLayout>
