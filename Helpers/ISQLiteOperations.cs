@@ -13,6 +13,6 @@
 
         Task<T> GetItemAsync(T entity);
 
-
+        Task<T> GetItemById(int id);
     }
 }
