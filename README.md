@@ -11,4 +11,6 @@
 | 5. | Shell Flyout | ✔️ | -- |
 | 6. | Date & Time picker | ✔️ | -- |
 | 7. | Carousel View | ✔️ | -- |
+| 8. | SQLite Database in .Net MAUI | ✔️ | -- |
+| 9. | Shapes | ✔️ | -- |
 
