@@ -12,33 +12,60 @@
                              >
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame WidthRequest="400" HorizontalOptions="FillAndExpand" BackgroundColor="#2b2b2b" CornerRadius="14" Margin="5">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
+                        <ContentView>
 
-                                <Image Source="icon.png" Grid.RowSpan="2"
+                            <SwipeView Margin="0">
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItemView>
+                                            <Frame HasShadow="False" BackgroundColor="Red">
+                                                <Label Text="Delete" TextColor="White" VerticalTextAlignment="Center" />
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="Delete_Tapped"/>
+                                                </Frame.GestureRecognizers>
+                                            </Frame>
+                                        </SwipeItemView>
+
+                                        <SwipeItemView>
+                                            <Frame HasShadow="False" BackgroundColor="Green">
+                                                <Label Text="Edit" TextColor="White" VerticalTextAlignment="Center"/>
+                                                <Frame.GestureRecognizers>
+                                                    <TapGestureRecognizer Tapped="Edit_Tapped"/>
+                                                </Frame.GestureRecognizers>
+                                            </Frame>
+                                        </SwipeItemView>
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Frame WidthRequest="400" HorizontalOptions="FillAndExpand" BackgroundColor="#2b2b2b" CornerRadius="14" Margin="5">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto" />
+                                            <RowDefinition Height="Auto" />
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="icon.png" Grid.RowSpan="2"
                                        HeightRequest="60" WidthRequest="60"
                                        Margin="0,0,10,0"/>
 
-                                <Label Grid.Column="1" TextColor="White"
+                                        <Label Grid.Column="1" TextColor="White"
                             Text="{Binding PlayerName}"
                             FontAttributes="Bold" />
 
-                                <Label Grid.Row="1" TextColor="White"
+                                        <Label Grid.Row="1" TextColor="White"
                             Grid.Column="1"
                             Text="{Binding Country}"
                             FontAttributes="Italic"
                             VerticalOptions="End" />
 
-                            </Grid>
-                        </Frame>
+                                    </Grid>
+                                </Frame>
+                            </SwipeView>
+                        </ContentView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
