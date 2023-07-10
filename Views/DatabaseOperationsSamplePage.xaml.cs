@@ -114,11 +114,26 @@ public partial class DatabaseOperationsSamplePage : ContentPage
         }
     }
 
-    private void Edit_Tapped(object sender, TappedEventArgs e)
+    private async void Edit_Tapped(object sender, TappedEventArgs e)
     {
         try
         {
-            //ToDo
+            var _playerId = (int)e.Parameter;
+
+            if (_playerId != 0)
+            {
+                //get item
+                var item = await _playerOperations.GetItemById(_playerId);
+
+                //Delete item
+                var result = await _playerOperations.UpdateAsync(item);
+
+                //Show success popup
+                //ToDo
+
+                //reload data
+                await GetDataAsync();
+            }
 
         }
         catch (Exception ex)
