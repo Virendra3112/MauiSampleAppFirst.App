@@ -9,6 +9,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     ObservableCollection<Player> players = new ObservableCollection<Player>();
     public ObservableCollection<Player> Players { get { return players; } }
 
+    private ISQLiteOperations<Player> _playerOperations;
     public DatabaseOperationsSamplePage()
     {
         InitializeComponent();
@@ -26,9 +27,9 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            var addData = DependencyService.Get<ISQLiteOperations<Player>>();
+            _playerOperations = DependencyService.Get<ISQLiteOperations<Player>>();
 
-            var _list = await addData.GetAllAsync();
+            var _list = await _playerOperations.GetAllAsync();
 
             if (_list.Any())
             {
@@ -37,7 +38,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
         }
         catch (Exception ex)
         {
-
+            Console.WriteLine(ex);
         }
     }
 
@@ -83,5 +84,46 @@ public partial class DatabaseOperationsSamplePage : ContentPage
         AddDataPopup.IsVisible = false;
         playerNameEntry.Text = string.Empty;
         countryName.Text = string.Empty;
+    }
+
+    private async void Delete_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            var _playerId = (int)e.Parameter;
+
+            if (_playerId != 0)
+            {
+                //get item
+                var item = await _playerOperations.GetItemById(_playerId);
+
+                //Delete item
+                var result = await _playerOperations.DeleteAsync(item);
+
+                //Show success popup
+                //ToDo
+
+                //reload data
+                await GetDataAsync();
+            }
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
+    }
+
+    private void Edit_Tapped(object sender, TappedEventArgs e)
+    {
+        try
+        {
+            //ToDo
+
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex);
+        }
     }
 }
