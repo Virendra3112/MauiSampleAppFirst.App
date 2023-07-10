@@ -6,14 +6,11 @@
 
     <AbsoluteLayout>
         <VerticalStackLayout>
-
             <CollectionView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-            x:Name="playersCollectionView" 
-                             >
+            x:Name="playersCollectionView">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
-
                             <SwipeView Margin="0">
                                 <SwipeView.RightItems>
                                     <SwipeItems>
@@ -21,7 +18,7 @@
                                             <Frame HasShadow="False" BackgroundColor="Red">
                                                 <Label Text="Delete" TextColor="White" VerticalTextAlignment="Center" />
                                                 <Frame.GestureRecognizers>
-                                                    <TapGestureRecognizer Tapped="Delete_Tapped"/>
+                                                    <TapGestureRecognizer Tapped="Delete_Tapped" CommandParameter="{Binding PlayerId}"/>
                                                 </Frame.GestureRecognizers>
                                             </Frame>
                                         </SwipeItemView>
@@ -53,15 +50,10 @@
                                        Margin="0,0,10,0"/>
 
                                         <Label Grid.Column="1" TextColor="White"
-                            Text="{Binding PlayerName}"
-                            FontAttributes="Bold" />
+                                               Text="{Binding PlayerName}" FontAttributes="Bold" />
 
-                                        <Label Grid.Row="1" TextColor="White"
-                            Grid.Column="1"
-                            Text="{Binding Country}"
-                            FontAttributes="Italic"
-                            VerticalOptions="End" />
-
+                                        <Label Grid.Row="1" TextColor="White"  Grid.Column="1"
+                                                Text="{Binding Country}" FontAttributes="Italic"  VerticalOptions="End" />
                                     </Grid>
                                 </Frame>
                             </SwipeView>
@@ -77,8 +69,6 @@
 
         <ContentView x:Name="AddDataPopup" BackgroundColor="Black" 
                      AbsoluteLayout.LayoutBounds=".5,.2,400,250" AbsoluteLayout.LayoutFlags="PositionProportional">
-
-
             <VerticalStackLayout Margin="20">
                 <Label Text="Add Players Data" HorizontalOptions="CenterAndExpand" TextColor="White" FontSize="Large" FontAttributes="Bold"/>
                 <Button Text="Close" HorizontalOptions="End" CornerRadius="20" BackgroundColor="Red" TextColor="White" Clicked="Close_Button_Clicked" />
@@ -87,13 +77,7 @@
                 <Entry x:Name="countryName" Placeholder="Country name" PlaceholderColor="White" TextColor="White" />
 
                 <Button Text="Submit" Clicked="Submit_Button_Clicked"/>
-
-
             </VerticalStackLayout>
-
-
         </ContentView>
-
-
     </AbsoluteLayout>
 </ContentPage>
