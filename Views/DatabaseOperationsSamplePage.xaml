@@ -7,7 +7,7 @@
     <AbsoluteLayout>
         <VerticalStackLayout>
             <CollectionView AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All"
-            x:Name="playersCollectionView">
+            x:Name="playersCollectionView" EmptyView="No data available.">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <ContentView>
@@ -60,6 +60,25 @@
                         </ContentView>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
+
+                <!--<CollectionView.EmptyView>
+                    <ContentView BackgroundColor="Red">
+                        <StackLayout HorizontalOptions="CenterAndExpand"
+                             VerticalOptions="CenterAndExpand" BackgroundColor="Pink">
+                            <Label Text="No results matched your filter."
+                           Margin="10,25,10,10"
+                           FontAttributes="Bold"
+                           FontSize="18"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                            <Label Text="Try a broader filter?"
+                           FontAttributes="Italic"
+                           FontSize="12"
+                           HorizontalOptions="Fill"
+                           HorizontalTextAlignment="Center" />
+                        </StackLayout>
+                    </ContentView>
+                </CollectionView.EmptyView>-->
             </CollectionView>
 
         </VerticalStackLayout>
@@ -78,6 +97,10 @@
 
                 <Button Text="Submit" Clicked="Submit_Button_Clicked"/>
             </VerticalStackLayout>
+        </ContentView>
+
+        <ContentView BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
+            <ActivityIndicator BackgroundColor="Red" x:Name="activityIndicator" Color="Black" HeightRequest="50" WidthRequest="50" />
         </ContentView>
     </AbsoluteLayout>
 </ContentPage>
