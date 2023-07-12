@@ -1,6 +1,7 @@
 using MauiSampleAppFirst.Helpers;
 using MauiSampleAppFirst.Models;
 using System.Collections.ObjectModel;
+using static Android.Content.ClipData;
 
 namespace MauiSampleAppFirst.Views;
 
@@ -8,6 +9,11 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 {
     ObservableCollection<Player> players = new ObservableCollection<Player>();
     public ObservableCollection<Player> Players { get { return players; } }
+
+    bool _isEdit = false;
+    public bool IsEdit { get { return _isEdit; } }
+
+    Player editItem;
 
     private ISQLiteOperations<Player> _playerOperations;
     public DatabaseOperationsSamplePage()
@@ -71,9 +77,19 @@ public partial class DatabaseOperationsSamplePage : ContentPage
                 !string.IsNullOrEmpty(plaerCountry))
             {
 
-                var addData = DependencyService.Get<ISQLiteOperations<Player>>();
-                await addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
+                if (IsEdit)
+                {
+                    //Edit item
+                    var result = await _playerOperations.UpdateAsync(editItem);
 
+                    //Show success popup
+                }
+
+                else
+                {
+                    var addData = DependencyService.Get<ISQLiteOperations<Player>>();
+                    await addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
+                }
                 await GetDataAsync();
             }
 
@@ -136,16 +152,18 @@ public partial class DatabaseOperationsSamplePage : ContentPage
             if (_playerId != 0)
             {
                 //get item
-                var item = await _playerOperations.GetItemById(_playerId);
+                editItem = await _playerOperations.GetItemById(_playerId);
 
-                //Delete item
-                var result = await _playerOperations.UpdateAsync(item);
+                AddDataPopup.IsVisible = true;
 
-                //Show success popup
-                //ToDo
+                ////Edit item
+                //var result = await _playerOperations.UpdateAsync(item);
 
-                //reload data
-                await GetDataAsync();
+                ////Show success popup
+                ////ToDo
+
+                ////reload data
+                //await GetDataAsync();
             }
 
         }
