@@ -27,7 +27,7 @@
                                             <Frame HasShadow="False" BackgroundColor="Green">
                                                 <Label Text="Edit" TextColor="White" VerticalTextAlignment="Center"/>
                                                 <Frame.GestureRecognizers>
-                                                    <TapGestureRecognizer Tapped="Edit_Tapped"/>
+                                                    <TapGestureRecognizer Tapped="Edit_Tapped" CommandParameter="{Binding PlayerId}" />
                                                 </Frame.GestureRecognizers>
                                             </Frame>
                                         </SwipeItemView>
