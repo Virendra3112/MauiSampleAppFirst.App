@@ -70,17 +70,20 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 
             //Get data from entry
 
-            var plaerName = playerNameEntry.Text;
-            var plaerCountry = countryName.Text;
+            var playerName = playerNameEntry.Text;
+            var playerCountry = countryName.Text;
 
-            if (!string.IsNullOrEmpty(plaerName) &&
-                !string.IsNullOrEmpty(plaerCountry))
+            if (!string.IsNullOrEmpty(playerName) &&
+                !string.IsNullOrEmpty(playerCountry))
             {
 
                 if (IsEdit)
                 {
+                    var updatedItem = editItem;
+                    updatedItem.PlayerName = playerName;
+                    updatedItem.Country = playerCountry;
                     //Edit item
-                    var result = await _playerOperations.UpdateAsync(editItem);
+                    var result = await _playerOperations.UpdateAsync(updatedItem);
 
                     //Show success popup
 
@@ -90,7 +93,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
                 else
                 {
                     var addData = DependencyService.Get<ISQLiteOperations<Player>>();
-                    await addData.InsertAsync(new Player { PlayerName = plaerName, Country = plaerCountry });
+                    await addData.InsertAsync(new Player { PlayerName = playerName, Country = playerCountry });
                 }
                 await GetDataAsync();
             }
@@ -157,6 +160,11 @@ public partial class DatabaseOperationsSamplePage : ContentPage
                 editItem = await _playerOperations.GetItemById(_playerId);
 
                 AddDataPopup.IsVisible = true;
+
+                playerNameEntry.Text = editItem.PlayerName;
+                countryName.Text = editItem.Country;
+
+                _isEdit = true;
             }
 
         }
