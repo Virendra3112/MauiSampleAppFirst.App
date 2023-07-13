@@ -83,6 +83,8 @@ public partial class DatabaseOperationsSamplePage : ContentPage
                     var result = await _playerOperations.UpdateAsync(editItem);
 
                     //Show success popup
+
+                    await DisplayAlert("Success", "Data updated successfullly.", "OK");
                 }
 
                 else
@@ -145,7 +147,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            activityIndicator.IsVisible = true;
+            //activityIndicator.IsVisible = true;
 
             var _playerId = (int)e.Parameter;
 
@@ -155,15 +157,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
                 editItem = await _playerOperations.GetItemById(_playerId);
 
                 AddDataPopup.IsVisible = true;
-
-                ////Edit item
-                //var result = await _playerOperations.UpdateAsync(item);
-
-                ////Show success popup
-                ////ToDo
-
-                ////reload data
-                //await GetDataAsync();
             }
 
         }
