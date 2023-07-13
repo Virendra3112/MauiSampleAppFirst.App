@@ -87,7 +87,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 
                     //Show success popup
 
-                    await DisplayAlert("Success", "Data updated successfullly.", "OK");
+                    await DisplayAlert("Success", "Data updated successfully.", "OK");
                 }
 
                 else
@@ -134,6 +134,9 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 
                 //Show success popup
                 //ToDo
+
+                await DisplayAlert("Success", "Item deleted successfully.", "OK");
+
 
                 //reload data
                 await GetDataAsync();
