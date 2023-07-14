@@ -1,7 +1,6 @@
 using MauiSampleAppFirst.Helpers;
 using MauiSampleAppFirst.Models;
 using System.Collections.ObjectModel;
-using static Android.Content.ClipData;
 
 namespace MauiSampleAppFirst.Views;
 
@@ -33,7 +32,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            activityIndicator.IsVisible = true;
+            //activityIndicator.IsVisible = true;
             //await Task.Delay(500);
             _playerOperations = DependencyService.Get<ISQLiteOperations<Player>>();
 
@@ -48,7 +47,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
 
             }
 
-            activityIndicator.IsVisible = false;
+            //activityIndicator.IsVisible = false;
 
         }
         catch (Exception ex)
