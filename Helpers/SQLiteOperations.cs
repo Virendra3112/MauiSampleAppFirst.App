@@ -1,6 +1,4 @@
-﻿using SQLite;
-
-namespace MauiSampleAppFirst.Helpers
+﻿namespace MauiSampleAppFirst.Helpers
 {
     public class SQLiteOperations<T> : ISQLiteOperations<T> where T : class, new()
     {
