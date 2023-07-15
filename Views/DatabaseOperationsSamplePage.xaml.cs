@@ -119,7 +119,7 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            activityIndicator.IsVisible = true;
+            //activityIndicator.IsVisible = true;
 
             var _playerId = (int)e.Parameter;
 
