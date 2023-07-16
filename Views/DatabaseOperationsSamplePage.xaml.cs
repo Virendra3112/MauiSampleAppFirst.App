@@ -32,8 +32,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            //activityIndicator.IsVisible = true;
-            //await Task.Delay(500);
             _playerOperations = DependencyService.Get<ISQLiteOperations<Player>>();
 
             var _list = await _playerOperations.GetAllAsync();
@@ -46,9 +44,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
             {
 
             }
-
-            //activityIndicator.IsVisible = false;
-
         }
         catch (Exception ex)
         {
@@ -119,8 +114,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            //activityIndicator.IsVisible = true;
-
             var _playerId = (int)e.Parameter;
 
             if (_playerId != 0)
@@ -152,8 +145,6 @@ public partial class DatabaseOperationsSamplePage : ContentPage
     {
         try
         {
-            //activityIndicator.IsVisible = true;
-
             var _playerId = (int)e.Parameter;
 
             if (_playerId != 0)
