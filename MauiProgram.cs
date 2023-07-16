@@ -16,7 +16,7 @@ public static class MauiProgram
          .ConfigureMauiHandlers((handlers) =>
           {
 #if ANDROID
-                handlers.AddHandler(typeof(MauiSampleAppFirst.Controls.CustomHtmlLabel), typeof(MauiSampleAppFirst.Platforms.Android.CustomRenderer.CustomHtmlLabelRenderer));
+               // handlers.AddHandler(typeof(MauiSampleAppFirst.Controls.CustomHtmlLabel), typeof(MauiSampleAppFirst.Platforms.Android.CustomRenderer.CustomHtmlLabelRenderer));
 #elif IOS
               //handlers.AddHandler(typeof(PressableView), typeof(XamarinCustomRenderer.iOS.Renderers.PressableViewRenderer));
 #endif
