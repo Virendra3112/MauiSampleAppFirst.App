@@ -98,9 +98,5 @@
                 <Button Text="Submit" Clicked="Submit_Button_Clicked"/>
             </VerticalStackLayout>
         </ContentView>
-
-        <!--<StackLayout BackgroundColor="Transparent" AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All">
-            <ActivityIndicator BackgroundColor="Red" x:Name="activityIndicator" Color="Black" HeightRequest="50" WidthRequest="50" />
-        </StackLayout>-->
     </AbsoluteLayout>
 </ContentPage>
